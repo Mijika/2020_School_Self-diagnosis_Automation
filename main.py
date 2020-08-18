@@ -4,7 +4,7 @@ import os
 
 DEIVER_PATH = './크롬 드리이버/chromedriver.exe'
 TARGET_URL = 'https://eduro.sen.go.kr/hcheck/index.jsp'
-NAME = '안담기'
+NAME = '홍길동'
 KEY = 'GDGEGV'
 
 def main():
