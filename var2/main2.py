@@ -90,8 +90,9 @@ class Robot:
 				self.data_form_process(user_data)
 
 			except Exception as e:
-				logger.error(user_name, "오류 발생")
-				self.result += str(user_name) + " 오류 발생"
+				logger.error("main_process 오류 발생 :"
+					+ user_data[0])
+				self.result_msg += str(user_data[0]) + " 오류 발생"
 				continue
 
 	def web_page_access(user_data):
@@ -100,7 +101,7 @@ class Robot:
 			self.driver.implicitly_wait(2)
 
 		except Exception as e:
-			logger.error("web page access error" + str(user_data[0]))
+			logger.error("web page access 오류 발생" + str(user_data[0]))
 
 	def user_form_process(user_data):
 		pass
@@ -112,9 +113,9 @@ class Robot:
 
 if __name__ == '__main__':
 	data_controller = Users_data_loader()
-	data_list = data_controller.get_users_data()
-	print(data_list)
+	users_data = data_controller.get_users_data()
+	print(users_data)
 
-	robot = Robot(data_list)
+	robot = Robot(users_data)
 	robot.start()
 	robot.close()
