@@ -1,0 +1,28 @@
+{
+  "name": "self-check-automation",
+  "description": "Internal API based light & fast self-check automation",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/junhoyeo/self-check-automation",
+  "author": "JunhoYeo <hanaro0704@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist | gnomon",
+    "lint": "eslint . --ext .ts --fix"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "form-data": "^3.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^14.0.23",
+    "@typescript-eslint/eslint-plugin": "^3.7.0",
+    "all-contributors-cli": "^6.17.0",
+    "eslint": "^7.5.0",
+    "eslint-config-airbnb-typescript": "^9.0.0",
+    "eslint-plugin-import": "^2.22.0",
+    "gnomon": "^1.5.0",
+    "typescript": "^3.9.6"
+  }
+}
